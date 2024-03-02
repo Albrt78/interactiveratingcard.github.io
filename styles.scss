@@ -1,0 +1,239 @@
+$Orange: hsl(25, 97%, 53%);
+$White: hsl(0, 0%, 100%);
+$Light-Grey: hsl(217, 12%, 63%);
+$Medium-Grey: hsl(216, 12%, 54%);
+$Dark-Blue: hsl(213, 19%, 18%);
+$Very-Dark-Blue: hsl(216, 12%, 8%);
+$border-size: 50px;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $Very-Dark-Blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100dvh;
+    font-family: "Overpass", sans-serif;
+    margin-block-start: 0.9rem;
+
+    .card {
+        background: radial-gradient(
+            circle at top center,
+            hsl(213, 20%, 18%) 30%,
+            hsla(213, 20%, 18%, 0.573) 70%
+        );
+        padding: 2rem;
+        border-radius: 2rem;
+        width: 26rem;
+        height: 26rem;
+
+        img {
+            width: $border-size;
+            height: $border-size;
+            background-color: hsl(214, 20%, 23%);
+            padding: 1rem;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+        }
+
+        h4 {
+            color: $White;
+            font-weight: 700;
+            font-size: 1.75rem;
+            padding-inline-start: 0.1rem;
+            margin-bottom: 0.7rem;
+        }
+
+        p {
+            color: $Light-Grey;
+            max-width: 370px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1.83rem;
+        }
+
+        ul {
+            display: flex;
+            gap: 1.45rem;
+            margin-bottom: 1.9rem;
+
+            li {
+                button {
+                    color: $Light-Grey;
+                    width: $border-size;
+                    height: $border-size;
+                    background-color: hsl(214, 20%, 23%);
+                    border-radius: 50%;
+                    text-align: center;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $Orange;
+                        color: $White;
+                    }
+
+                    &:active {
+                        background-color: rgb(4, 108, 116);
+                    }
+                }
+            }
+        }
+
+        button {
+            background-color: $Orange;
+            color: $White;
+            width: 97%;
+            font-size: 1rem;
+            padding-block: 0.8rem;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 0.05rem;
+            font-weight: 700;
+            cursor: pointer;
+
+            &:hover,
+            &:active {
+                background-color: $White;
+                color: $Orange;
+            }
+        }
+
+        @media (max-width: 576.98px) {
+            max-width: 23rem;
+
+            ul {
+                gap: 1.2rem;
+
+                li {
+                    button {
+                        width: 45px;
+                        height: 45px;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 375.98px) {
+            max-width: 20rem;
+
+            ul {
+                li {
+                    button {
+                        width: 37px;
+                        height: 37px;
+                        line-height: 0.5rem;
+                    }
+                }
+            }
+
+            p {
+                font-size: 0.87rem;
+            }
+        }
+    }
+
+    .thanks__card {
+        background: radial-gradient(
+            circle at top center,
+            hsl(213, 20%, 18%) 30%,
+            hsla(213, 20%, 18%, 0.573) 70%
+        );
+        padding-block: 2.8rem;
+        padding-inline: 1.7rem;
+        border-radius: 2rem;
+        width: 26rem;
+        height: 26rem;
+        text-align: center;
+        display: block;
+
+        .thanks__card-rating-wrapper {
+            margin-top: 1.5rem;
+            margin-left: 5.25rem;
+            background-color: hsl(214, 20%, 23%);
+            padding-block: 0.3rem;
+            width: 193px;
+            border-radius: 15px;
+            color: $Orange;
+
+            .thanks__card-rating {
+                font-size: 0.93rem;
+            }
+        }
+
+        h1 {
+            margin-top: 1rem;
+            font-size: 1.73rem;
+            color: $White;
+        }
+
+        .thanks__card-description {
+            margin-top: 0.7rem;
+            font-size: 1.01rem;
+            color: $Medium-Grey;
+        }
+
+        button {
+            background-color: $Orange;
+            color: $White;
+            width: 97%;
+            font-size: 1rem;
+            padding-block: 0.8rem;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 0.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 1rem;
+
+            &:hover,
+            &:active {
+                background-color: $White;
+                color: $Orange;
+            }
+        }
+
+        @media (max-width: 576.98px) {
+            max-width: 23rem;
+
+            .thanks__card-rating-wrapper {
+                margin-left: 3.8rem;
+            }
+        }
+
+        @media (max-width: 375.98px) {
+            max-width: 20rem;
+
+            .thanks__card-rating-wrapper {
+                margin-left: 2.3rem;
+            }
+
+            .thanks__card-description {
+                font-size: 0.87rem;
+            }
+        }
+    }
+
+    .attribution {
+        font-family: "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        text-align: center;
+        color: $White;
+
+        a {
+            color: hsl(228, 45%, 44%);
+        }
+    }
+}
