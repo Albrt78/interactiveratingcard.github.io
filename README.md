@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Interactive Rating Component](https://your-solution-url.com)
--   Live Site URL: [Interactive Rating Component](https://your-live-site-url.com)
+-   Solution URL: [Interactive Rating Component](https://github.com/Albrt78/interactiveratingcard.github.io)
+-   Live Site URL: [Interactive Rating Component](https://albrt78.github.io/interactiveratingcard.github.io/)
 
 ## My process
 
